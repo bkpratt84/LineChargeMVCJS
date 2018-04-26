@@ -16,13 +16,24 @@ namespace LineChargeJS
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/vuelidate").Include(
+                       "~/Scripts/vuelidate/validators.min.js",
+                       "~/Scripts/vuelidate/vuelidate.min.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/vue").Include(
+                       "~/Scripts/moment.min.js",
+                       "~/Scripts/accounting.min.js",
+                       "~/Scripts/axios.js",
+                       "~/Scripts/vue.js",
+                       "~/Scripts/Home/index.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/umd/popper.min.js",
+                      "~/Scripts/bootstrap.min.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/Site.css"));
         }
     }
 }
